@@ -12,4 +12,4 @@ def transcribe_audio():
     if file.filename == "":
         return jsonify({"error": "No selected file"}), 400
     if file:
-        text = utils.transcribe(audio_file=file)
+        return utils.transcribe(audio_file=file)
