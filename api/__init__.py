@@ -1,4 +1,3 @@
-from werkzeug.middleware.proxy_fix import ProxyFix
 from flask import Blueprint, Flask
 from flask_login import LoginManager
 from flask_jwt_extended import JWTManager
@@ -10,9 +9,6 @@ from openai import OpenAI
 
 app = Flask(__name__)
 app.config.from_object(Config)
-app.wsgi_app = ProxyFix(
-    app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_port=1, x_prefix=1
-)
 api = Blueprint("api", __name__, url_prefix="/api")
 
 login_manager = LoginManager()
