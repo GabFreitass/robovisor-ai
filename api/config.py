@@ -1,7 +1,7 @@
 class Config:
-    SECRET_KEY = "5791628bb0b13ce0c676dfde280ba245"
+    SECRET_KEY = ""
 
-    JWT_SECRET_KEY = "134165867gn13ce0c676dfde280ba245"
+    JWT_SECRET_KEY = ""
     JWT_TOKEN_LOCATION = ["headers"]
     JWT_HEADER_TYPE = "Bearer"
     JWT_HEADER_NAME = "Authorization"
